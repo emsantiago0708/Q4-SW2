@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/ICT/4th Qtr/Seatwork 2</title>
+    <style>
+       body {
+        background-image: url('https://cdn.dribbble.com/users/6669240/screenshots/14903709/media/bb26790bf6821874ccec7f7b3b9cff19.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;           
+        height: 100vh;
+        margin: 20px;
+        color: yellow;
+        }
+        body {
+        text-align: right;
+        margin-bottom: 0px;
+        }
+        input {
+        margin-bottom: 10px;
+        }
+        button {
+        padding: 8px 16px;
+        margin: 5px;
+        cursor: pointer;
+        }
+        .container {
+        background-color: pink;
+        padding: 20px;
+        margin-top: 10px;
+        max-width: 500px;
+        margin-left: 1190px;
+        }
+        button {
+        color: red;
+</style>
+</head>
+<body>
+<div class="container mt-3">
+<form>
+<center><h1>HI MY NAME IS BAYMAX. BA LA LA LA!!!</h1>
+<h2>Calculator</h2>
+<h3>Given:</h3>
+<br><label for="x">Enter a value for x:</label><br>
+<input type="number" id="x">
+<br><label for="y">Enter a value for y:</label></br>
+<input type="number" id="y"></center>
+</div>
+</form>
+    <br><button onclick="calculate('product')">Product of X and Y</button></br>
+    <br><button onclick="calculate('exponent')">X raised to Y</button></br>
+    <br><button onclick="calculate('remainder')">Get the remainder</button></br>
+    <br><button onclick="calculate('equality')">Check if X is equal to Y</button></br>
+</div>
+</form>
+<script>
+function calculate(operation) {
+    var x = parseFloat(document.getElementById('x').value);
+    var y = parseFloat(document.getElementById('y').value);
+    var result;
+
+    switch(operation) {
+        case 'product':
+            result = x * y;
+            break;
+        case 'exponent':
+            result = x ** y;
+            break;
+        case 'remainder':
+            result = x % y;
+            break;
+        case 'equality':
+            result = (x === y) ? "x is equal to y" : "x is not equal to y";
+            break;
+        default:
+            result = "Invalid operation";
+    }
+    window.alert("Result: " + result);
+}
+</script>
+</body>
+</html>
